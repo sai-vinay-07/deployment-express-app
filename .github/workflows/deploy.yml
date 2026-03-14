@@ -20,7 +20,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd deployment-express-app
+            cd ~/deployment-express-app
             git pull
             docker stop express-container || true
             docker rm express-container || true
